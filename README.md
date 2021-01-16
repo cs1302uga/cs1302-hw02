@@ -64,7 +64,9 @@ will serve as a helpful study guide for the exam.
    * In what file is the error?
    * On what line in the source code is the error?
    * What specifically is causing this error?
-   * Fix that specific compile-time error. If you notice any logical errors in the code, don't worry about fixing them at this time.
+   
+   Fix that specific compile-time error and recompile the code. If you notice any logical errors in the code, don't worry about 
+   fixing them at this time.
 
 1. Execute the `find src` command from directly within your `cs1302-hw02` directory. You should see the following output:
    
@@ -97,32 +99,41 @@ will serve as a helpful study guide for the exam.
 
 1. Answer the following questions about `MyCat.java` in your notes:
 
-   * 
-1. From the `cs1302-hw02` directory, use your freshly compiled `MyCat` program to display the contents of
-   `Printer.java` by passing the relative path to `Printer.java` as a command-line argument. 
-   **HINT:** When a program interacts with files, it is relative to the current working directory in
-   which the program is being run. That is, the directory you are in when you type the `java` command.
-   For a Java program, relative paths are relative to that directory. 
+   * What is the name of the variable that stores the first command-line argument?
    
-1. Take a moment to note the similarties between using `MyCat` and the Unix `cat` utility.
+   * What method is called if you run with `MyCat` with a single `-` as the only command-line argument?
+      * Test it out! execute the code from your `cs1302-hw02` directory using the following command:
+         `java -cp bin cs1302.exceptions.MyCat -`
+      * Notice that the program is blocked waiting for you to type. Go ahead and type a few words.
+      * When you're finished, you can trigger the end of file (a.k.a. the `EOF`) by pressing `C-d`.
+      * Try running the unix `cat` command with a single `-`. Notice how it behaves the same way.
+   
+   * What method is called if you pass in the name of a regular file?
+      * Test it out! execute the code from your `cs1302-hw02` directory by passing in the relative path
+        to the `Printer.java` file using the following command:
+         `java -cp bin cs1302.exceptions.Mycat src/cs1302/exceptions/Printer.java`
+      * Test the Unix `cat utility with the same input. Cool, huh?
 
-1. From the `cs1302-hw02` directory, use the `MyCat` program to display the contents of standard input.
-   **HINT:** Read through the code to see what command-line argument you might use to read from standard 
-   input.
-   This may seem weird at first, but the program should allow you to type in lines of text to standard
-   input. When you complete a line by hitting return, the program will print the line to standard input.
-   The program will terminate once it reaches the end of the file. What does that mean for standard
-   input? You can trigger the end of file (a.k.a. the `EOF`) by pressing `C-d`.
-
-1. From the `cs1302-hw02` directory, run the `MyCat` program with no command-line arguments. A run-time
-   exception should occur. Answer the following questions about the exception in your notes:
+1. Take a few moments to understand the three methods in `Printer.java`. Note that both `printStdInLines` and
+   `printFileLines` both call `printLines`. The difference is in how the `Scanner` object is created. Although
+   the `Scanner` objects are created differently, the tasks of printing lines of a file and printing lines from
+   standard input are nearly identical!
+   
+   Also notice how moving the methods to print lines into the `Printer` class greatly simplified the logic in our `MyCat`
+   program. As of now, `MyCat` doesn't even need to directly contain any loops!
+   
+1. From the `cs1302-hw02` directory, run the `MyCat` program with **no** command-line arguments. A run-time
+   exception should occur. Before attempting to fix the exception, answer the following questions about the 
+   exception in your notes:
    
    * What is the name of the exception?
    * Why did the exception occur?
    * Is this exception a checked or an unchecked exception? How can you tell?
 
-1. There are multiple ways to fix the run-time exception that you encountered in the last step.
-   Fix the problem in such a way that the following criteria are met whenever the exception occurs:
+1. There are multiple ways to fix the run-time exception that you encountered in the last step. You
+   are allowed to change the code in `MyCat` by moving lines around, deleting existing code, adding code, 
+   etc. Just make sure you fix the problem in such a way that the following criteria are met whenever 
+   the exception occurs:
    
    * The program does not crash.
    * The exception message is stil displayed to standard error. To do this, you will need to call the
@@ -149,6 +160,11 @@ will serve as a helpful study guide for the exam.
 1. Now, let's add some more functionality to the `MyCat` program. Change the code so that one or more
    command-line arguments are accepted. The expected behavor is that `MyCat` should print the files, in
    order, to standard output, effectively con<b>cat</b>enating the contents of the supplied files.
+   
+1. With this change, your program may no longer generate an `ArrayIndexOutOfBoundsException` if the user
+   doesn't provide any command-line arguments. However, we still want to provide a helpful message to let
+   the user know how to properly use the program. Update your code so that when the user provides no 
+   command-line arguments, the program outputs: `Usage: MyCat [filename]...`
 
 1. From the `cs1302-hw02` directory, use your enhanced `MyCat` program to display the contents of the 
    following three files all passed in at once:`Printer.java`, standard input ("-"), and `MyCat.java` 
@@ -158,16 +174,21 @@ will serve as a helpful study guide for the exam.
 1. Run your enhanced `MyCat` program by passing in two filenames as command-line arguments. Make sure
    the first file does not exist in the file system. Your program should catch the `FileNotFoundException`,
    print the appropriate message, and still print the contents of the second file (assuming it exists).
-   
+
 1. Update the comments in the source code to reflect any functionality that has been added since
    the beginning of this exercise.
+
+1. Try additional test cases to test the robustness of your application. If you come up with a good idea for
+   a test case, feel free to share it on Piazza!
+   
+1. Generate the API documentation website for all of the code in the cs1302 package. Host the documentation 
+   on Odin using `cs1302-hw02-doc` as the name for your symbolic link. 
 
 <hr/>
 
 ![CP](https://img.shields.io/badge/Just%20Finished%20Checkpoint-3-success?style=for-the-badge)
 
 <hr/>
-
 
 ### Submission Steps
 
@@ -177,13 +198,13 @@ will serve as a helpful study guide for the exam.
    directory with the following information:
 
    1. Your name and UGA ID number; and
-   1. Collaborator names, if any. 
+   1. Full URL for your hosted API website 
    
    Here is an example of the contents of `SUBMISSION.md`.
    
    ```
-   1. Sally Smith (811-000-999)
-   2. Collaborators: Joe Allen, Stacie Mack
+   Sally Smith (811-000-999)
+   https://webwork.cs.uga.edu/~your_username/cs1302-hw02-doc/
    ```
 
 1. Change directories to the parent of `cs1302-hw02` (e.g., `cd ..` from `cs1302-hw02`). If you would like
