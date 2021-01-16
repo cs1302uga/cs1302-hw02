@@ -1,8 +1,8 @@
-# ce04 From Exceptional to Enhanced Cat
+# hw02 From Exceptional to Enhanced Cat
 
-![Approved for: Fall 2020](https://img.shields.io/badge/Approved%20for-Fall%202020-blueviolet)
+![Approved for: Spring 2021](https://img.shields.io/badge/Approved%20for-Spring%202021-success)
 
-This class exercise is designed to familiarize students with exceptions and file I/O in Java.
+This homework assignment is designed to familiarize students with exceptions and file I/O in Java.
 
 ## Prerequisite Knowledge
 
@@ -19,26 +19,29 @@ This class exercise is designed to familiarize students with exceptions and file
 In your notes, clearly answer the following questions. These instructions assume that you are 
 logged into the Odin server. 
 
-**NOTE:** If a step requires you to enter in a command, please provide in your notes the full 
-command that you typed to make the related action happen. If context is necessary (e.g., the 
-command depends on your present working directory), then please note that context as well.
+**NOTE:** For each step, please provide in your notes the full command that you typed to make the related 
+action happen along with an explanation of why that command worked. Some commands require multiple options. 
+It is important to not only recall what you typed but also why you typed each of them. If context is necessary 
+(e.g., the command depends on your present working directory), then please note that context as well.
+You won't need to submit your notes in your final submission. However, if done properly, your exercise notes 
+will serve as a helpful study guide for the exam.
 
 ## Exercise Steps
 
 ### Checkpoint 1 Steps
 
-1. Use Git to clone the repository for this exercise onto Odin into a subdirectory called `cs1302-ce04`:
+1. Use Git to clone the repository for this exercise onto Odin into a subdirectory called `cs1302-hw02`:
 
    ```
-   $ git clone --depth 1 https://github.com/cs1302uga/cs1302-ce04.git
+   $ git clone --depth 1 https://github.com/cs1302uga/cs1302-hw02.git
    ```
 
-1. Change into the `cs1302-ce04` directory that was just created and look around. There should be
+1. Change into the `cs1302-hw02` directory that was just created and look around. There should be
    multiple Java files somewhere in the directory structure. You may want to execute the `find` command
    on the `src` directory for a quick, easy-to-read view of the directory contents.
 
    * What are the fully qualified names for the classes contained in the Java files?
-   * What is the path to the default package for _source code_ relative to the `cs1302-ce04`
+   * What is the path to the default package for _source code_ relative to the `cs1302-hw02`
      directory?
 
 1. The directory you downloaded contains a Java implementation of the Unix `cat` utility. Remember, the commands
@@ -50,20 +53,40 @@ command depends on your present working directory), then please note that contex
 1. Read through the Java code in `MyCat.java` and `Printer.java`. Note, there is a dependency between the two files.
    Based on the dependencies, which `.java` file must be compiled first?
 
-1. From the `cs1302-ce04` directory, try to compile each Java file separately, specifying `bin`
+1. From the `cs1302-hw02` directory, try to compile each Java file separately, specifying `bin`
    as the default package for _compiled code_. 
 
-   **Note** In this step, you may encounter a compile-time (syntax) error. **Hint**: the error should not be 
-   a "cannot find symbol" error. If it is, you will need to adjust your compilation command.
+   **Note** In this step, you will encounter a compile-time (syntax) error related to exceptions and exception handling. 
+   **Hint**: the error should not be a "cannot find symbol" error. If it is, you will need to adjust your compilation command.
    
    Answer the following in your notes about the compile-time error:
 
    * In what file is the error?
    * On what line in the source code is the error?
-   * How does Java describe the error?
-   * Fix that specific compile-time error. There may be logical errors with the code--do not fix them at this time.
-   * Briefly describe your fix.
+   * What specifically is causing this error?
+   * Fix that specific compile-time error. If you notice any logical errors in the code, don't worry about fixing them at this time.
 
+1. Execute the `find src` command from directly within your `cs1302-hw02` directory. You should see the following output:
+   
+   ```
+   src
+   src/cs1302
+   src/cs1302/exceptions
+   src/cs1302/exceptions/MyCat.java
+   src/cs1302/exceptions/Printer.java
+   ```
+   
+1. Execute the `find bin` command from directly within your `cs1302-hw02` directory. If everything was compiled properly,
+   you should see the following output:
+   
+   ```
+   bin
+   bin/cs1302
+   bin/cs1302/exceptions
+   bin/cs1302/exceptions/Printer.class
+   bin/cs1302/exceptions/MyCat.class
+   ```
+   
 <hr/>
 
 ![CP](https://img.shields.io/badge/Just%20Finished%20Checkpoint-1-success?style=for-the-badge)
@@ -72,7 +95,10 @@ command depends on your present working directory), then please note that contex
 
 ### Checkpoint 2 Steps - Using and Enhancing Your Cat
 
-1. From the `cs1302-ce04` directory, use your freshly compiled `MyCat` program to display the contents of
+1. Answer the following questions about `MyCat.java` in your notes:
+
+   * 
+1. From the `cs1302-hw02` directory, use your freshly compiled `MyCat` program to display the contents of
    `Printer.java` by passing the relative path to `Printer.java` as a command-line argument. 
    **HINT:** When a program interacts with files, it is relative to the current working directory in
    which the program is being run. That is, the directory you are in when you type the `java` command.
@@ -80,7 +106,7 @@ command depends on your present working directory), then please note that contex
    
 1. Take a moment to note the similarties between using `MyCat` and the Unix `cat` utility.
 
-1. From the `cs1302-ce04` directory, use the `MyCat` program to display the contents of standard input.
+1. From the `cs1302-hw02` directory, use the `MyCat` program to display the contents of standard input.
    **HINT:** Read through the code to see what command-line argument you might use to read from standard 
    input.
    This may seem weird at first, but the program should allow you to type in lines of text to standard
@@ -88,7 +114,7 @@ command depends on your present working directory), then please note that contex
    The program will terminate once it reaches the end of the file. What does that mean for standard
    input? You can trigger the end of file (a.k.a. the `EOF`) by pressing `C-d`.
 
-1. From the `cs1302-ce04` directory, run the `MyCat` program with no command-line arguments. A run-time
+1. From the `cs1302-hw02` directory, run the `MyCat` program with no command-line arguments. A run-time
    exception should occur. Answer the following questions about the exception in your notes:
    
    * What is the name of the exception?
@@ -109,7 +135,7 @@ command depends on your present working directory), then please note that contex
    MyCat: <message>
    ```
 
-1. From the `cs1302-ce04` directory, run the `MyCat` program with no command-line arguments. What's the
+1. From the `cs1302-hw02` directory, run the `MyCat` program with no command-line arguments. What's the
    difference between this execution of the program and the one performed two steps earlier?
 
 <hr/>
@@ -124,7 +150,7 @@ command depends on your present working directory), then please note that contex
    command-line arguments are accepted. The expected behavor is that `MyCat` should print the files, in
    order, to standard output, effectively con<b>cat</b>enating the contents of the supplied files.
 
-1. From the `cs1302-ce04` directory, use your enhanced `MyCat` program to display the contents of the 
+1. From the `cs1302-hw02` directory, use your enhanced `MyCat` program to display the contents of the 
    following three files all passed in at once:`Printer.java`, standard input ("-"), and `MyCat.java` 
    in that order! If your program does not currently allow "-" to be specified for arbitrary file names 
    in the list of command-line arguments, then modify it to accomodate that feature.
@@ -147,7 +173,7 @@ command depends on your present working directory), then please note that contex
 
 **Each student needs to individually submit their own work.**
 
-1. Create a plain text file called `SUBMISSION.md` directly inside the `cs1302-ce04`
+1. Create a plain text file called `SUBMISSION.md` directly inside the `cs1302-hw02`
    directory with the following information:
 
    1. Your name and UGA ID number; and
@@ -160,14 +186,14 @@ command depends on your present working directory), then please note that contex
    2. Collaborators: Joe Allen, Stacie Mack
    ```
 
-1. Change directories to the parent of `cs1302-ce04` (e.g., `cd ..` from `cs1302-ce04`). If you would like
-   to make a backup tar file, the instructions are in the submissions steps for [ce02](https://github.com/cs1302uga/cs1302-ce02).
+1. Change directories to the parent of `cs1302-hw02` (e.g., `cd ..` from `cs1302-hw02`). If you would like
+   to make a backup tar file, the instructions are in the submissions steps for [hw01](https://github.com/cs1302uga/cs1302-hw01).
    We won't repeat those steps here and you can view them as optional.
    
 1. Use the `submit` command to submit this exercise to `csci-1302`:
    
    ```
-   $ submit cs1302-ce04 csci-1302
+   $ submit cs1302-hw02 csci-1302
    ```
    
    Read the output of the submit command very carefully. If there is an error while submitting, then it will displayed 
