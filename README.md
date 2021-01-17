@@ -181,8 +181,12 @@ will serve as a helpful study guide for the exam.
 1. Try additional test cases to test the robustness of your application. If you come up with a good idea for
    a test case, feel free to share it on Piazza!
    
+1. Verify that all of your code passes the `checkstyle` audit using the command `check1302 src`. Note: if you 
+   receive any error messages as a result of running this command, you can find more information about the error
+   and how to fix it in the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
+   
 1. Generate the API documentation website for all of the code in the cs1302 package. Host the documentation 
-   on Odin using `cs1302-hw02-doc` as the name for your symbolic link. 
+   on Odin using `cs1302-hw02-doc` as the name for your symbolic link.
 
 <hr/>
 
