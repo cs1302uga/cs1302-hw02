@@ -103,7 +103,9 @@ will serve as a helpful study guide for the exam.
    
    * What method is called if you run with `MyCat` with a single `-` as the only command-line argument?
       * Test it out! execute the code from your `cs1302-hw02` directory using the following command:
-         `java -cp bin cs1302.exceptions.MyCat -`
+        ```console
+        $ java -cp bin cs1302.exceptions.MyCat -
+        ```
       * Notice that the program is blocked waiting for you to type. Go ahead and type a few words.
       * When you're finished, you can trigger the end of file (a.k.a. the `EOF`) by pressing `C-d`.
       * Try running the unix `cat` command with a single `-`. Notice how it behaves the same way.
@@ -111,7 +113,9 @@ will serve as a helpful study guide for the exam.
    * What method is called if you pass in the name of a regular file?
       * Test it out! execute the code from your `cs1302-hw02` directory by passing in the relative path
         to the `Printer.java` file using the following command:
-         `java -cp bin cs1302.exceptions.Mycat src/cs1302/exceptions/Printer.java`
+        ```console
+        $ java -cp bin cs1302.exceptions.Mycat src/cs1302/exceptions/Printer.java
+        ```
       * Test the Unix `cat utility with the same input. Cool, huh?
 
 1. Take a few moments to understand the three methods in `Printer.java`. Note that both `printStdInLines` and
