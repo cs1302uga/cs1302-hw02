@@ -114,9 +114,19 @@ will serve as a helpful study guide for the exam.
       * Test it out! execute the code from your `cs1302-hw02` directory by passing in the relative path
         to the `Printer.java` file using the following command:
         ```console
-        $ java -cp bin cs1302.exceptions.Mycat src/cs1302/exceptions/Printer.java
+        $ java -cp bin cs1302.exceptions.MyCat src/cs1302/exceptions/Printer.java
         ```
       * Test the Unix `cat utility with the same input. Cool, huh?
+      
+1. Interesting Side Note: Take a close look at the following command:
+
+   ```console
+   $ java -cp bin cs1302.exception.MyCat - < src/cs1302/exceptions/Printer.java
+   ```
+   
+   Notice that this execution has a single command-line argument (`-`). However, we are using redirecting the
+   input to come from `Printer.java`! So, the program will output the contents of the file even though the
+   internal `Scanner` object will be created with `System.in`!
 
 1. Take a few moments to understand the three methods in `Printer.java`. Note that both `printStdInLines` and
    `printFileLines` both call `printLines`. The difference is in how the `Scanner` object is created. Although
