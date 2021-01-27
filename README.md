@@ -150,8 +150,9 @@ will serve as a helpful study guide for the exam.
    the exception occurs:
    
    * The program does not crash.
-   * The exception message is stil displayed to standard error. To do this, you will need to call the
-   `toString()` method on the exception object reference given in the `catch` statement.
+   * The exception message is displayed to standard error (using `System.err.println` instead of `System.out.println`). 
+     To print the exception message, you can call the `toString()` method on the exception object reference given in 
+     the `catch` statement.
 
    When displaying the exception message, something like the following will suffice 
    (replacing `<message>` with the actual exception message):
