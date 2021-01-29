@@ -121,7 +121,7 @@ will serve as a helpful study guide for the exam.
 1. Interesting Side Note: Take a close look at the following command:
 
    ```console
-   $ java -cp bin cs1302.exception.MyCat - < src/cs1302/exceptions/Printer.java
+   $ java -cp bin cs1302.exceptions.MyCat - < src/cs1302/exceptions/Printer.java
    ```
    
    Notice that this execution has a single command-line argument (`-`). However, we are using redirecting the
