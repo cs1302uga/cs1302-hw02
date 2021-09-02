@@ -155,15 +155,28 @@ will serve as a helpful study guide for the exam.
      the `catch` statement.
 
    When displaying the exception message, something like the following will suffice 
-   (replacing `<message>` with the actual exception message):
+   (replacing `<message>` with the actual exception message generated from calling `toString` on the exception object):
 
    ```
    MyCat: <message>
    ```
 
-1. From the `cs1302-hw02` directory, run the `MyCat` program with no command-line arguments. What's the
-   difference between this execution of the program and the one performed two steps earlier?
-
+1. From the `cs1302-hw02` directory, run the `MyCat` program with no command-line arguments. If implemented properly,
+   you should see the output below if no command-line arguments are given:
+   
+   ```
+   MyCat: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+   ```
+   
+   What's the difference between this execution of the program and the one performed two steps earlier? Take a minute
+   to think about why catching the exception is beneficial before moving on.
+   
+   **Answer:** When you execute this code and you see the new error message, the code is not crashing. In fact, it has
+   _recovered_ from the crash. If you were to add additional code below the `try/catch` block, you would see that
+   code execute after the error message is printed. Before we added our `try/catch` block, the code crashed when
+   no command-line argument was given. So, despite the fact that the error message looks similar in both cases, the
+   result is actually quite different.
+   
 <hr/>
 
 ![CP](https://img.shields.io/badge/Just%20Finished%20Checkpoint-2-success?style=for-the-badge)
