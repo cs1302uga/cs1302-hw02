@@ -38,7 +38,8 @@ will serve as a helpful study guide for the exam.
 
 1. Change into the `cs1302-hw02` directory that was just created and look around. There should be
    multiple Java files somewhere in the directory structure. You may want to execute the `find` command
-   on the `src` directory for a quick, easy-to-read view of the directory contents.
+   on the `src` directory for a quick, easy-to-read view of the directory contents (you can also use `tree`
+   if you prefer the output of `tree`).
 
    * What are the fully qualified names for the classes contained in the Java files?
    * What is the path to the default package for _source code_ relative to the `cs1302-hw02`
@@ -68,7 +69,8 @@ will serve as a helpful study guide for the exam.
    Fix that specific compile-time error and recompile the code. If you notice any logical errors in the code, don't worry about 
    fixing them at this time.
 
-1. Execute the `find src` command from directly within your `cs1302-hw02` directory. You should see the following output:
+1. Execute the `find src` command from directly within your `cs1302-hw02` directory. You can also use `tree src`. The output from `tree src`
+   will contain the same information but will be formatted slightly differently. If you use `find`, you should see the following output:
    
    ```
    src
@@ -78,7 +80,7 @@ will serve as a helpful study guide for the exam.
    src/cs1302/exceptions/Printer.java
    ```
    
-1. Execute the `find bin` command from directly within your `cs1302-hw02` directory. If everything was compiled properly,
+1. Execute the `find bin` (or `tree bin`) command from directly within your `cs1302-hw02` directory. If everything was compiled properly,
    you should see the following output:
    
    ```
