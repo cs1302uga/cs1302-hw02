@@ -1,6 +1,6 @@
 # hw02 From Exceptional to Enhanced Cat
 
-![Approved for: Spring 2022](https://img.shields.io/badge/Approved%20for-Spring%202022-purple)
+![Approved for: Fall 2022](https://img.shields.io/badge/Approved%20for-Fall%202022-darkgreen)
 
 This homework assignment is designed to familiarize students with exceptions and file I/O in Java.
 
