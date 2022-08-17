@@ -19,7 +19,6 @@ public class MyCat {
     public static void main(String[] args) {
 
         String filename = args[0];
-        Scanner input = null;
 
         if (filename.equals("-")) {
             Printer.printStdInLines();
