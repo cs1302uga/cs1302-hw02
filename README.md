@@ -194,7 +194,7 @@ will serve as a helpful study guide for the exam.
 1. With this change, your program may no longer generate an `ArrayIndexOutOfBoundsException` if the user
    doesn't provide any command-line arguments. However, we still want to provide a helpful message to let
    the user know how to properly use the program. Update your code so that when the user provides no 
-   command-line arguments, the program outputs: `Usage: MyCat [filename]...`
+   command-line arguments, the program outputs this exact message: `Usage: MyCat [filename]...`
 
 1. From the `cs1302-hw02` directory, use your enhanced `MyCat` program to display the contents of the 
    following three files all passed in at once:`Printer.java`, standard input ("-"), and `MyCat.java` 
@@ -211,12 +211,16 @@ will serve as a helpful study guide for the exam.
 1. Try additional test cases to test the robustness of your application. If you come up with a good idea for
    a test case, feel free to share it on Piazza!
    
+<!--
+Removed these two steps in Fall 2022 because the webwork server was down.
+
 1. Verify that all of your code passes the `checkstyle` audit using the command `check1302 src`. Note: if you 
    receive any error messages as a result of running this command, you can find more information about the error
    and how to fix it in the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
    
 1. Generate the API documentation website for all of the code in the cs1302 package. Host the documentation 
    on Odin using `cs1302-hw02-doc` as the name for your symbolic link.
+-->
 
 <hr/>
 
@@ -232,15 +236,21 @@ will serve as a helpful study guide for the exam.
    directory with the following information:
 
    1. Your name and UGA ID number; and
-   1. Full URL for your hosted API website 
+   <!-- 1. Full URL for your hosted API website -->
    
    Here is an example of the contents of `SUBMISSION.md`.
    
+   <!--
    ```
    Sally Smith (811-000-999)
    https://webwork.cs.uga.edu/~your_username/cs1302-hw02-doc/
    ```
-
+   -->
+   
+   ```
+   Sally Smith (811-000-999)
+   ```
+   
 1. Change directories to the parent of `cs1302-hw02` (e.g., `cd ..` from `cs1302-hw02`). If you would like
    to make a backup tar file, the instructions are in the submissions steps for [hw01](https://github.com/cs1302uga/cs1302-hw01).
    We won't repeat those steps here and you can view them as optional.
