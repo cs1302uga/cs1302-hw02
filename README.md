@@ -118,7 +118,7 @@ will serve as a helpful study guide for the exam.
         ```console
         $ java -cp bin cs1302.exceptions.MyCat src/cs1302/exceptions/Printer.java
         ```
-      * Test the Unix `cat utility with the same input. Cool, huh?
+      * Test the Unix `cat` utility with the same input. Cool, huh?
       
 1. Interesting Side Note: Take a close look at the following command:
 
