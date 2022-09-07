@@ -198,8 +198,9 @@ will serve as a helpful study guide for the exam.
 
 1. From the `cs1302-hw02` directory, use your enhanced `MyCat` program to display the contents of the 
    following three files all passed in at once:`Printer.java`, standard input ("-"), and `MyCat.java` 
-   in that order! If your program does not currently allow "-" to be specified for arbitrary file names 
-   in the list of command-line arguments, then modify it to accomodate that feature.
+   in that order! If your program does not currently multiple files along with "-" to be passed into
+   the list of command-line arguments, then modify it to accomodate that feature. We recommend trying other
+   combinations of files and "-" to thoroughly test your application.
 
 1. Run your enhanced `MyCat` program by passing in two filenames as command-line arguments. Make sure
    the first file does not exist in the file system. Your program should catch the `FileNotFoundException`,
