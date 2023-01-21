@@ -1,6 +1,6 @@
 # hw02 From Exceptional to Enhanced Cat
 
-![Approved for: Fall 2022](https://img.shields.io/badge/Approved%20for-Fall%202022-darkgreen)
+![Approved for: Spring 2023](https://img.shields.io/badge/Approved%20for-Spring%202023-magenta)
 
 This homework assignment is designed to familiarize students with exceptions and file I/O in Java.
 
@@ -210,9 +210,6 @@ will serve as a helpful study guide for the exam.
 
 1. Try additional test cases to test the robustness of your application. If you come up with a good idea for
    a test case, feel free to share it on Piazza!
-   
-<!--
-Removed these two steps in Fall 2022 because the webwork server was down.
 
 1. Verify that all of your code passes the `checkstyle` audit using the command `check1302 src`. Note: if you 
    receive any error messages as a result of running this command, you can find more information about the error
@@ -220,7 +217,6 @@ Removed these two steps in Fall 2022 because the webwork server was down.
    
 1. Generate the API documentation website for all of the code in the cs1302 package. Host the documentation 
    on Odin using `cs1302-hw02-doc` as the name for your symbolic link.
--->
 
 <hr/>
 
@@ -236,19 +232,13 @@ Removed these two steps in Fall 2022 because the webwork server was down.
    directory with the following information:
 
    1. Your name and UGA ID number; and
-   <!-- 1. Full URL for your hosted API website -->
+   1. Full URL for your hosted API website
    
    Here is an example of the contents of `SUBMISSION.md`.
    
-   <!--
    ```
    Sally Smith (811-000-999)
    https://webwork.cs.uga.edu/~your_username/cs1302-hw02-doc/
-   ```
-   -->
-   
-   ```
-   Sally Smith (811-000-999)
    ```
    
 1. Change directories to the parent of `cs1302-hw02` (e.g., `cd ..` from `cs1302-hw02`). If you would like
