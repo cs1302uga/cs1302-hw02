@@ -1,6 +1,6 @@
 # hw02 From Exceptional to Enhanced Cat
 
-![Approved for: Fall 2022](https://img.shields.io/badge/Approved%20for-Fall%202022-darkgreen)
+![Approved for: Spring 2023](https://img.shields.io/badge/Approved%20for-Spring%202023-magenta)
 
 This homework assignment is designed to familiarize students with exceptions and file I/O in Java.
 
@@ -30,6 +30,10 @@ will serve as a helpful study guide for the exam.
 
 ### Checkpoint 1 Steps
 
+1. If you have not completed [Exceptions Tutorial - Part 1](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/exceptions/exceptions1.md)
+   or [Exceptions Tutorial - Part 2](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/exceptions/exceptions2.md), you should complete
+   those before proceeding.
+   
 1. Use Git to clone the repository for this exercise onto Odin into a subdirectory called `cs1302-hw02`:
 
    ```
