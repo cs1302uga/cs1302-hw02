@@ -57,8 +57,8 @@ will serve as a helpful study guide for the exam.
 1. From the `cs1302-hw02` directory, try to compile each Java file separately, specifying `bin`
    as the default package for _compiled code_. 
 
-   **Note** In this step, you will encounter a compile-time (syntax) error related to exceptions and exception handling. 
-   **Hint**: the error should not be a "cannot find symbol" error. If it is, you will need to adjust your compilation command.
+   **Note:** In this step, you will encounter a compile-time (syntax) error related to exceptions and exception handling. 
+   **Hint:** The error should not be a "cannot find symbol" error. If it is, you will need to adjust your compilation command.
    
    Answer the following in your notes about the compile-time error:
 
