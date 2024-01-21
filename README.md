@@ -1,6 +1,6 @@
 # hw02 From Exceptional to Enhanced Cat
 
-![Approved for: Fall 2023](https://img.shields.io/badge/Approved%20for-Fall%202023-green)
+![Approved for: Spring 2024](https://img.shields.io/badge/Approved%20for-Spring%202024-blue)
 
 This homework assignment is designed to familiarize students with exceptions and file I/O in Java.
 
@@ -16,7 +16,7 @@ This homework assignment is designed to familiarize students with exceptions and
 
 ## Questions
 
-In your notes, clearly answer the following questions. These instructions assume that you are 
+In your notes, answer the following questions. These instructions assume that you are 
 logged into the Odin server. 
 
 **NOTE:** For each step, please provide in your notes the full command that you typed to make the related 
@@ -51,7 +51,7 @@ will serve as a helpful study guide for the exam.
    the Unix `cat` utility to print the contents of `MyCat.java` to the terminal. Write the command you used to do 
    this in your notes.
 
-1. Read through the Java code in `MyCat.java` and `Printer.java`. Note, there is a dependency between the two files.
+1. Read through the Java code in `MyCat.java` and `Printer.java`. Note, that there is a dependency between the two files.
    Based on the dependencies, which `.java` file must be compiled first?
 
 1. From the `cs1302-hw02` directory, try to compile each Java file separately, specifying `bin`
@@ -110,7 +110,7 @@ will serve as a helpful study guide for the exam.
         ```
       * Notice that the program is blocked waiting for you to type. Go ahead and type a few words.
       * When you're finished, you can trigger the end of file (a.k.a. the `EOF`) by pressing `C-d`.
-      * Try running the unix `cat` command with a single `-`. Notice how it behaves the same way.
+      * Try running the Unix `cat` command with a single `-`. Notice how it behaves the same way.
    
    * What method is called if you pass in the name of a regular file?
       * Test it out! execute the code from your `cs1302-hw02` directory by passing in the relative path
@@ -135,7 +135,7 @@ will serve as a helpful study guide for the exam.
    the `Scanner` objects are created differently, the tasks of printing lines of a file and printing lines from
    standard input are nearly identical!
    
-   Also notice how moving the methods to print lines into the `Printer` class greatly simplified the logic in our `MyCat`
+   Also, notice how moving the methods to print lines into the `Printer` class greatly simplified the logic in our `MyCat`
    program. As of now, `MyCat` doesn't even need to directly contain any loops!
    
 1. From the `cs1302-hw02` directory, run the `MyCat` program with **no** command-line arguments. A run-time
@@ -176,8 +176,8 @@ will serve as a helpful study guide for the exam.
    **Answer:** When you execute this code and you see the new error message, the code is not crashing. In fact, it has
    _recovered_ from the crash. If you were to add additional code below the `try/catch` block, you would see that
    code execute after the error message is printed. Before we added our `try/catch` block, the code crashed when
-   no command-line argument was given. So, despite the fact that the error message looks similar in both cases, the
-   result is actually quite different.
+   no command-line argument was given. So, even though the error message looks similar in both cases, the
+   result is quite different.
    
 <hr/>
 
@@ -188,7 +188,7 @@ will serve as a helpful study guide for the exam.
 ### Checkpoint 3 Steps - Further Enhancing Your Cat
 
 1. Now, let's add some more functionality to the `MyCat` program. Change the code so that one or more
-   command-line arguments are accepted. The expected behavor is that `MyCat` should print the files, in
+   command-line arguments are accepted. The expected behavior is that `MyCat` should print the files, in
    order, to standard output, effectively con<b>cat</b>enating the contents of the supplied files.
    
 1. With this change, your program may no longer generate an `ArrayIndexOutOfBoundsException` if the user
@@ -199,7 +199,7 @@ will serve as a helpful study guide for the exam.
 1. From the `cs1302-hw02` directory, use your enhanced `MyCat` program to display the contents of the 
    following three files all passed in at once:`Printer.java`, standard input ("-"), and `MyCat.java` 
    in that order! If your program does not currently allow "-" to be specified for arbitrary file names 
-   in the list of command-line arguments, then modify it to accomodate that feature.
+   in the list of command-line arguments, then modify it to accommodate that feature.
 
 1. Run your enhanced `MyCat` program by passing in two filenames as command-line arguments. Make sure
    the first file does not exist in the file system. Your program should catch the `FileNotFoundException`,
@@ -242,7 +242,7 @@ will serve as a helpful study guide for the exam.
    ```
    
 1. Change directories to the parent of `cs1302-hw02` (e.g., `cd ..` from `cs1302-hw02`). If you would like
-   to make a backup tar file, the instructions are in the submissions steps for [hw01](https://github.com/cs1302uga/cs1302-hw01).
+   to make a backup tar file, the instructions are in the submission steps for [hw01](https://github.com/cs1302uga/cs1302-hw01).
    We won't repeat those steps here and you can view them as optional.
    
 1. Use the `submit` command to submit this exercise to `csci-1302`:
