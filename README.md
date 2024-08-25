@@ -216,7 +216,9 @@ will serve as a helpful study guide for the exam.
    and how to fix it in the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
    
 1. Generate the API documentation website for all of the code in the cs1302 package. Host the documentation 
-   on Odin using `cs1302-hw02-doc` as the name for your symbolic link.
+   on Odin using `cs1302-hw02-doc` as the name for your symbolic link. After setting up your site, **don't
+   move your `cs1302-hw02` folder until after the assignment has been graded. We need to access the `doc`
+   folder from the website**.
 
 <hr/>
 
