@@ -37,19 +37,19 @@ will serve as a helpful study guide for the exam.
    ```
 
 1. Change into the `cs1302-hw02` directory that was just created and look around. There should be
-   multiple Java files somewhere in the directory structure. You may want to execute the `find` command
-   on the `src` directory for a quick, easy-to-read view of the directory contents (you can also use `tree`
-   if you prefer the output of `tree`).
+   multiple Java files somewhere in the directory structure. You may want to execute the `tree` command
+   on the `src` directory for a quick, easy-to-read view of the directory contents.
 
-   * What are the fully qualified names for the classes contained in the Java files?
-   * What is the path to the default package for _source code_ relative to the `cs1302-hw02`
-     directory?
+   * What are the fully qualified names for the classes contained in the Java files assuming that `src`
+     is the default package for source code?
 
-1. The directory you downloaded contains a Java implementation of the Unix `cat` utility. Remember, the commands
-   you have been executing in Unix are just programs that were installed by the system administrators. `MyCat.java`
+1. The directory you downloaded contains a Java implementation of the Unix `cat` utility. The `cat` command you've
+   been using is a pre-build Unix utility and we don't have access to the source code for that program. `MyCat.java`
    works similarly to `cat` but was written by your instructors and will be compiled by you. Before compiling, use 
-   the Unix `cat` utility to print the contents of `MyCat.java` to the terminal. Write the command you used to do 
-   this in your notes.
+   the Unix `cat` utility to print the contents of `MyCat.java` to the terminal using the following command from
+   within the `cs1302-hw02` directory:
+
+   `cat src/MyCat.java`
 
 1. Read through the Java code in `MyCat.java` and `Printer.java`. Note, that there is a dependency between the two files.
    Based on the dependencies, which `.java` file must be compiled first?
@@ -57,10 +57,10 @@ will serve as a helpful study guide for the exam.
 1. From the `cs1302-hw02` directory, try to compile each Java file separately, specifying `bin`
    as the default package for _compiled code_. 
 
-   **Note:** In this step, you will encounter a compile-time (syntax) error related to exceptions and exception handling. 
+   **Note:** When compiling `MyCat.java`, you should encounter a compile-time (syntax) error related to exceptions and exception handling. 
    **Hint:** The error should not be a "cannot find symbol" error. If it is, you will need to adjust your compilation command.
    
-   Answer the following in your notes about the compile-time error:
+   Answer the following in your notes about the compile-time error related to exceptions and exception handling:
 
    * In what file is the error?
    * On what line in the source code is the error?
@@ -69,15 +69,18 @@ will serve as a helpful study guide for the exam.
    Fix that specific compile-time error and recompile the code. If you notice any logical errors in the code, don't worry about 
    fixing them at this time.
 
-1. Execute the `find src` command from directly within your `cs1302-hw02` directory. You can also use `tree src`. The output from `tree src`
-   will contain the same information but will be formatted slightly differently. If you use `find`, you should see the following output:
-   
+   **Hint:** You will need to add an `import` statement in this step.
+
+1. Execute the `tree src` command from directly within your `cs1302-hw02` directory. You should see the following output:
+
    ```
    src
-   src/cs1302
-   src/cs1302/exceptions
-   src/cs1302/exceptions/MyCat.java
-   src/cs1302/exceptions/Printer.java
+   └── cs1302
+       └── exceptions
+           ├── MyCat.java
+           └── Printer.java
+
+   3 directories, 2 files
    ```
    
 1. Execute the `find bin` (or `tree bin`) command from directly within your `cs1302-hw02` directory. If everything was compiled properly,
@@ -85,10 +88,12 @@ will serve as a helpful study guide for the exam.
    
    ```
    bin
-   bin/cs1302
-   bin/cs1302/exceptions
-   bin/cs1302/exceptions/Printer.class
-   bin/cs1302/exceptions/MyCat.class
+   └── cs1302
+       └── exceptions
+           ├── MyCat.class
+           └── Printer.class
+
+   3 directories, 2 files
    ```
    
 <hr/>
