@@ -108,7 +108,11 @@ will serve as a helpful study guide for the exam.
 
 1. Answer the following questions about `MyCat.java` in your notes:
 
+   **If you are not familiar with command-line arguments, take a moment to look at the
+     [example in the textbook](https://cs1302uga.github.io/cs1302-book/java/cla/tutorial.html)**
+     
    * What is the name of the variable that stores the first command-line argument?
+     
 
    * Which method in `MyCat` is called if you run `MyCat` with the name of a regular file as the only command-line argument?
       * Test it out! execute the code from your `cs1302-hw02` directory by passing in the relative path
