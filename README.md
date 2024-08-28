@@ -107,8 +107,16 @@ will serve as a helpful study guide for the exam.
 1. Answer the following questions about `MyCat.java` in your notes:
 
    * What is the name of the variable that stores the first command-line argument?
-   
-   * What method is called if you run with `MyCat` with a single `-` as the only command-line argument?
+
+   * Which method in `MyCat` is called if you run `MyCat` with the name of a regular file as the only command-line argument?
+      * Test it out! execute the code from your `cs1302-hw02` directory by passing in the relative path
+        to the `Printer.java` file using the following command:
+        ```console
+        $ java -cp bin cs1302.exceptions.MyCat src/cs1302/exceptions/Printer.java
+        ```
+      * Test the Unix `cat` utility with the same input. Cool, huh?
+        
+   * Which method in `MyCat` is called if you run with `MyCat` with a single `-` as the only command-line argument?
       * Test it out! execute the code from your `cs1302-hw02` directory using the following command:
         ```console
         $ java -cp bin cs1302.exceptions.MyCat -
@@ -116,14 +124,6 @@ will serve as a helpful study guide for the exam.
       * Notice that the program is blocked waiting for you to type. Go ahead and type a few words.
       * When you're finished, you can trigger the end of file (a.k.a. the `EOF`) by pressing `C-d`.
       * Try running the Unix `cat` command with a single `-`. Notice how it behaves the same way.
-   
-   * What method is called if you pass in the name of a regular file?
-      * Test it out! execute the code from your `cs1302-hw02` directory by passing in the relative path
-        to the `Printer.java` file using the following command:
-        ```console
-        $ java -cp bin cs1302.exceptions.MyCat src/cs1302/exceptions/Printer.java
-        ```
-      * Test the Unix `cat` utility with the same input. Cool, huh?
       
 1. Interesting Side Note: Take a close look at the following command:
 
@@ -157,23 +157,16 @@ will serve as a helpful study guide for the exam.
    the exception occurs:
    
    * The program does not crash.
-   * The exception message is displayed to standard error (using `System.err.println` instead of `System.out.println`). 
-     To print the exception message, you can call the `toString()` method on the exception object reference given in 
-     the `catch` statement.
+   * An informative message is displayed to the user. When displaying the message, something like the following
+     will suffice (you can use this exact message without changing anything if you wish):
 
-   When displaying the exception message, something like the following will suffice 
-   (replacing `<message>` with the actual exception message generated from calling `toString` on the exception object):
+     ```
+     MyCat: Missing command line argument
+     Usage: MyCat [filename]...
+     ```
 
-   ```
-   MyCat: <message>
-   ```
-
-1. From the `cs1302-hw02` directory, run the `MyCat` program with no command-line arguments. If implemented properly,
-   you should see the output below if no command-line arguments are given:
-   
-   ```
-   MyCat: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
-   ```
+1. From the `cs1302-hw02` directory, run the `MyCat` program with no command-line arguments. You should see the
+   output from the previous step.
    
    What's the difference between this execution of the program and the one performed two steps earlier? Take a minute
    to think about why catching the exception is beneficial before moving on.
@@ -182,7 +175,7 @@ will serve as a helpful study guide for the exam.
    _recovered_ from the crash. If you were to add additional code below the `try/catch` block, you would see that
    code execute after the error message is printed. Before we added our `try/catch` block, the code crashed when
    no command-line argument was given. So, even though the error message looks similar in both cases, the
-   result is quite different.
+   result is quite different as this enables the program to continue running.
    
 <hr/>
 
@@ -196,15 +189,19 @@ will serve as a helpful study guide for the exam.
    command-line arguments are accepted. The expected behavior is that `MyCat` should print the files, in
    order, to standard output, effectively con<b>cat</b>enating the contents of the supplied files.
    
-1. With this change, your program may no longer generate an `ArrayIndexOutOfBoundsException` if the user
+1. With this change, your program *may* no longer generate an `ArrayIndexOutOfBoundsException` (depending
+   on how you write the code) if the user
    doesn't provide any command-line arguments. However, we still want to provide a helpful message to let
-   the user know how to properly use the program. Update your code so that when the user provides no 
-   command-line arguments, the program outputs this exact message: `Usage: MyCat [filename]...`
+   the user know how to properly use the program. Make sure that the same message (from checkpoint 2) is
+   emitted from your program when the user provides no command-line arguments. Remember, this print
+   statement may need to happen even if an exception is not thrown.
 
 1. From the `cs1302-hw02` directory, use your enhanced `MyCat` program to display the contents of the 
    following three files all passed in at once:`Printer.java`, standard input ("-"), and `MyCat.java` 
    in that order! If your program does not currently allow "-" to be specified for arbitrary file names 
-   in the list of command-line arguments, then modify it to accommodate that feature.
+   in the list of command-line arguments, then modify it to accommodate that feature. In other words,
+   you should be able to supply any number of files to `MyCat` and it should print them all (or error
+   messages if a file doesn't exist).
 
 1. Run your enhanced `MyCat` program by passing in two filenames as command-line arguments. Make sure
    the first file does not exist in the file system. Your program should catch the `FileNotFoundException`,
@@ -215,10 +212,13 @@ will serve as a helpful study guide for the exam.
 
 1. Try additional test cases to test the robustness of your application. If you come up with a good idea for
    a test case, feel free to share it on Piazza!
+   * Can your program do three files? What if there is a `-` mixed in as one of the command line arguments?
+   * If you are unsure what your program should do, run the Unix `cat` utility with the same input. Your
+     program should work the same way.
 
-1. Verify that all of your code passes the `checkstyle` audit using the command `check1302 src`. Note: if you 
+1. Verify that all of your code passes the `check1302` audit using the command `check1302 src`. Note: if you 
    receive any error messages as a result of running this command, you can find more information about the error
-   and how to fix it in the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
+   and how to fix it in the [1302 Style Guide](https://github.com/cs1302uga/cs1302-styleguide/blob/master/README.md).
    
 1. Generate the API documentation website for all of the code in the cs1302 package. Host the documentation 
    on Odin using `cs1302-hw02-doc` as the name for your symbolic link. After setting up your site, **don't
