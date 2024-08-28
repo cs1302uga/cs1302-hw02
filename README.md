@@ -8,6 +8,8 @@ This homework assignment is designed to familiarize students with exceptions and
 
 * Basic knowledge of Java exceptions, including checked exceptions, unchecked exceptions, and
   the use of `try`-`catch`, `throw`, and `throws`.
+* An ability to generate an API Documentation website using Javadoc and host the website on the
+  departmental server.
 * Familiarity with program command-line arguments in Java.
 
 ## Course-Specific Learning Outcomes
@@ -83,7 +85,7 @@ will serve as a helpful study guide for the exam.
    3 directories, 2 files
    ```
    
-1. Execute the `find bin` (or `tree bin`) command from directly within your `cs1302-hw02` directory. If everything was compiled properly,
+1. Execute the `tree bin` (or `tree bin`) command from directly within your `cs1302-hw02` directory. If everything was compiled properly,
    you should see the following output:
    
    ```
