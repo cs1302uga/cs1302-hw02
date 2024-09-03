@@ -51,7 +51,7 @@ will serve as a helpful study guide for the exam.
    the Unix `cat` utility to print the contents of `MyCat.java` to the terminal using the following command from
    within the `cs1302-hw02` directory:
 
-   `cat src/MyCat.java`
+   `cat src/cs1302/exceptions/MyCat.java`
 
 1. Read through the Java code in `MyCat.java` and `Printer.java`. Note, that there is a dependency between the two files.
    Based on the dependencies, which `.java` file must be compiled first?
