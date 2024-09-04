@@ -136,10 +136,19 @@ will serve as a helpful study guide for the exam.
    ```console
    $ java -cp bin cs1302.exceptions.MyCat - < src/cs1302/exceptions/Printer.java
    ```
+
+   It may be helpful to think of the above command as having two separate parts:
+
+   1. `java -cp bin cs1302.exceptions.MyCat - `: runs `MyCat` and provides `-` as the command-line argument. When executed,
+       the program will read from standard input through the `Scanner` object created with `System.in`.
+
+   2. `< src/cs1302/exceptions/Printer.java` this part tells the shell to redirect the `src/cs1302/exceptions/Printer.java`
+      file to standard input.
    
-   Notice that this execution has a single command-line argument (`-`). However, we are using redirecting the
-   input to come from `Printer.java`! So, the program will output the contents of the file even though the
-   internal `Scanner` object will be created with `System.in`!
+   When we combine these parts and execute the command, the program reads the file through standard input!
+   
+   Another way to think about it is that we are redirecting the input to come from `Printer.java` instead of the keyboard.
+   So, the program will output the contents of the file even though the internal `Scanner` object is created with `System.in`.
 
 1. Take a few moments to understand the three methods in `Printer.java`. Note that both `printStdInLines` and
    `printFileLines` both call `printLines`. The difference is in how the `Scanner` object is created. Although
