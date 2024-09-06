@@ -201,8 +201,8 @@ will serve as a helpful study guide for the exam.
 ### Checkpoint 3 Steps - Further Enhancing Your Cat
 
 1. Now, let's add some more functionality to the `MyCat` program. Change the code so that one or more
-   command-line arguments are accepted. The expected behavior is that `MyCat` should print the files, in
-   order, to standard output, effectively con<b>cat</b>enating the contents of the supplied files.
+   command-line arguments are accepted. The expected behavior is that `MyCat` should print the contents of
+   the files, in order, to standard output, effectively con<b>cat</b>enating the contents of the supplied files.
    
 1. With this change, your program *may* no longer generate an `ArrayIndexOutOfBoundsException` (depending
    on how you write the code) if the user
