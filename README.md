@@ -108,8 +108,8 @@ will serve as a helpful study guide for the exam.
 
 1. Answer the following questions about `MyCat.java` in your notes:
 
-   **If you are not familiar with command-line arguments, take a moment to look at the
-     [example in the textbook](https://cs1302uga.github.io/cs1302-book/java/cla/tutorial.html)**
+   **If you are not familiar with command-line arguments, take a few minutes to review the
+     [short chapter/example in the textbook](https://cs1302uga.github.io/cs1302-book/java/cla/cla-index.html)**
      
    * What is the name of the variable that stores the first command-line argument?
      
