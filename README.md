@@ -1,6 +1,6 @@
 # hw02 From Exceptional to Enhanced Cat
 
-![Approved for: Fall 2024](https://img.shields.io/badge/Approved%20for-Fall%202024-green)
+![Approved for: Spring 2025](https://img.shields.io/badge/Approved%20for-Spring%202025-blue)
 
 This homework assignment is designed to familiarize students with exceptions and file I/O in Java.
 
@@ -46,7 +46,7 @@ will serve as a helpful study guide for the exam.
      is the default package for source code?
 
 1. The directory you downloaded contains a Java implementation of the Unix `cat` utility. The `cat` command you've
-   been using is a pre-build Unix utility and we don't have access to the source code for that program. `MyCat.java`
+   been using is a pre-built Unix utility and we don't have access to the source code for that program. `MyCat.java`
    works similarly to `cat` but was written by your instructors and will be compiled by you. Before compiling, use 
    the Unix `cat` utility to print the contents of `MyCat.java` to the terminal using the following command from
    within the `cs1302-hw02` directory:
